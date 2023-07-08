@@ -22,9 +22,3 @@ variable "server_type" {
     description = "Server type (e.g cax11)"
     default = "cax11"
 }
-
-variable "ssh_keys" {
-  type        = list
-  description = "List of public ssh_key ids"
-}
-

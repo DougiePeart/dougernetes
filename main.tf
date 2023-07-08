@@ -32,6 +32,8 @@ resource "hcloud_server" "tycho-01" {
     ipv4_enabled = true
     ipv6_enabled = true
   }
-  ssh_keys = var.ssh_keys  
+  ssh_keys = [
+    "dougie"
+  ]  
   user_data = base64encode(local.user_data_script)
 }
