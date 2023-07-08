@@ -1,6 +1,6 @@
 variable "cluster_name" {
   description = "Cluster name (prefix for all resource names)"
-  default     = "hetzner"
+  default     = "tycho"
 }
 
 variable "master_ipv4" {
