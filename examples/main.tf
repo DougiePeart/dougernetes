@@ -6,12 +6,6 @@ provider "hcloud" {
   token = var.hcloud_token
 }
 
-# Create a new SSH key
-resource "hcloud_ssh_key" "default" {
-  name       = "Terraform Example"
-  public_key = file("~/.ssh/id_rsa.pub")
-}
-
 module "cluster" {
   source       = "cicdteam/k3s/hcloud"
   version      = "0.1.2"
