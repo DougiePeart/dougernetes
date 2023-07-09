@@ -35,10 +35,6 @@ variable "k3s_channel" {
   default     = "stable"
 }
 
-variable "ssh_keys" {
-  description = "Public SSH keys ids (list) used to login"
-}
-
 variable "hcloud_subnet_id" {
   description = "IP Subnet id used to assign internal IP addresses to nodes"
 }

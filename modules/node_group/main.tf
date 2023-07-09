@@ -14,7 +14,7 @@ resource "hcloud_server" "node" {
   server_type = var.node_type
   datacenter  = var.datacenter
   image       = var.image
-  ssh_keys    = var.ssh_keys
+  ssh_keys    = ["dougie"]
   user_data   = data.template_file.node_init.rendered
 }
 

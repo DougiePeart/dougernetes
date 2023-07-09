@@ -22,11 +22,6 @@ variable "master_type" {
   default     = "cax11"
 }
 
-variable "ssh_keys" {
-  type        = list
-  description = "List of public ssh_key ids"
-}
-
 variable "k3s_channel" {
   default = "stable"
 }

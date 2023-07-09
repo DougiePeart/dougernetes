@@ -25,7 +25,7 @@ resource "hcloud_server" "master" {
   datacenter  = var.datacenter
   image       = var.image
   server_type = var.node_type
-  ssh_keys    = var.ssh_keys
+  ssh_keys    = ["dougie"]
   user_data   = data.template_file.master_init.rendered
   keep_disk   = true
 }
