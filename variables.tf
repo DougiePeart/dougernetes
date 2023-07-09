@@ -1,21 +1,20 @@
 variable "hcloud_token" {
   description = "Hetzner cloud auth token"
-  type = string
 }
 
 variable "cluster_name" {
   description = "Cluster name (prefix for all resource names)"
-  default     = "tycho"
+  default     = "hetzner"
 }
 
 variable "datacenter" {
   description = "Hetzner datacenter where resources resides, hel1-dc2 (Helsinki 1 DC 2) or fsn1-dc14 (Falkenstein 1 DC14)"
-  default     = "fsn1-dc14"
+  default     = "hel1-dc2"
 }
 
 variable "image" {
   description = "Node boot image"
-  default     = "debian-12"
+  default     = "ubuntu-20.04"
 }
 
 variable "master_type" {
@@ -24,10 +23,9 @@ variable "master_type" {
 }
 
 variable "ssh_keys" {
-  description = "ssh keys"
-  default = [
-        "dougie"
-        ]
+  type        = list
+  description = "List of public ssh_key ids"
+  default = ["dougie"]
 }
 
 variable "k3s_channel" {
@@ -38,6 +36,6 @@ variable "node_groups" {
   description = "Map of worker node groups, key is server_type, value is count of nodes in group"
   type        = map(string)
   default = {
-    "cax11" = 2
+    "cax11" = 1
   }
 }

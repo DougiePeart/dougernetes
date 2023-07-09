@@ -1,7 +1,7 @@
 #!/bin/bash
 
-apt -yq update
-apt install -yq \
+apt-get -yq update
+apt-get install -yq \
     ca-certificates \
     curl \
     ntp

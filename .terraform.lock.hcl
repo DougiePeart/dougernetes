@@ -57,8 +57,7 @@ provider "registry.terraform.io/hashicorp/template" {
 }
 
 provider "registry.terraform.io/hetznercloud/hcloud" {
-  version     = "1.41.0"
-  constraints = "1.41.0"
+  version = "1.41.0"
   hashes = [
     "h1:wsV+X5rrSTLRXGi4K9+pN+xz2zF0cTpsyopKfmQ2fDw=",
     "zh:261f14c7c2d2a289f98ad38b91ad377e5300a0c74d25eb232c7b2deaef115005",

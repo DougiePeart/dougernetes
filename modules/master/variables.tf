@@ -1,11 +1,10 @@
 variable "hcloud_token" {
   description = "Hetzner cloud auth token"
-  type = string
 }
 
 variable "cluster_name" {
   description = "Cluster name (prefix for all resource names)"
-  default     = "tycho"
+  default     = "hetzner"
 }
 
 variable "datacenter" {
@@ -17,14 +16,14 @@ variable "node_type" {
   description = "Node type (size)"
   default     = "cax11"
   validation {
-    condition     = can(regex("^cax11$|^cax21$|cax31$", var.node_type))
-    error_message = "Only smaller ARM nodes allowed! I'm not made of money."
+    condition     = can(regex("^cax11$|^cax21$|^cax31$", var.node_type))
+    error_message = "Node type is not valid."
   }
 }
 
 variable "image" {
   description = "Node boot image"
-  default     = "debian-12"
+  default     = "ubuntu-20.04"
 }
 
 variable "k3s_token" {
@@ -36,17 +35,15 @@ variable "k3s_channel" {
   default     = "stable"
 }
 
+variable "ssh_keys" {
+  description = "Public SSH keys ids (list) used to login"
+  default = ["dougie"]
+}
+
 variable "hcloud_subnet_id" {
   description = "IP Subnet id used to assign internal IP addresses to nodes"
 }
 
 variable "hcloud_network_id" {
   description = "Herzner cloud private network Id"
-}
-
-variable "ssh_keys" {
-    description = "ssh keys"
-    default = [
-        "dougie"
-        ]
 }
