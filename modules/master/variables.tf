@@ -37,7 +37,6 @@ variable "k3s_channel" {
 
 variable "ssh_keys" {
   description = "Public SSH keys ids (list) used to login"
-  default = ["dougie"]
 }
 
 variable "hcloud_subnet_id" {

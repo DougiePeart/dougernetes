@@ -42,7 +42,6 @@ variable "master_ipv4" {
 
 variable "ssh_keys" {
   description = "Public SSH keys ids (list) used to login"
-  default = ["dougie"]
 }
 
 variable "hcloud_subnet_id" {

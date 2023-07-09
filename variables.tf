@@ -25,7 +25,6 @@ variable "master_type" {
 variable "ssh_keys" {
   type        = list
   description = "List of public ssh_key ids"
-  default = ["dougie"]
 }
 
 variable "k3s_channel" {
